@@ -1,0 +1,247 @@
+:root{
+    --primary: #5bb6a2;
+    --bg: #fff;
+}
+
+*{
+    font-family: 'poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'poppins', sans-serif;
+    background-color: #0111248a;
+    color: rgb(1, 1, 3);
+    min-height: 3000px;
+}
+
+/* navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: #5b7fb6;
+    border-bottom: 1px solid #5b64b6;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99999;
+}
+
+.navbar .navbar-logo{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    font-style: italic;
+}
+
+.navbar .navbar-logo span{
+    color: var(--primary);
+
+}
+
+.navbar .navbar-nav a{
+    color: #fff;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+}
+
+
+.navbar .navbar-nav a:hover{
+    color: var(--p);
+}
+
+.navbar .navbar-nav a::after{
+    content: '' ;
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after{
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a{
+    color: #fff;
+    margin: 0 0.5rem;
+}
+
+/* hero section */
+
+.hero{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../img/limalimacwe.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero .content{
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+}
+
+.hero .content h1{
+    font-size: 5em;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgb(1, 1, 3);
+}
+
+.hero .content h1 span{
+    color: var(--primary);
+}
+
+
+.hero .content h6{
+    color: #fff;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    
+}
+
+/* about section */
+
+.about,
+.profil {
+    padding: 8rem 7% 1.4rem;
+}
+
+.about h2, 
+.profil h2{
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+}
+
+.about h2 span, 
+.profil h2 span{
+    color: var(--primary);
+}
+
+.about .row {
+    display: flex;
+}
+
+.about .row .about-img{
+    flex: 1 1 45rem;
+
+}
+
+.about .row .about-img{
+    width: 100%;
+    
+}
+
+.about .row .content{
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+}
+
+.about .row .content h3{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.about .row .content p{
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+    margin: auto;
+    font-size: 1.2rem;
+}
+
+/* profil section */
+
+.profil h2{
+    margin-bottom: 1rem;
+}
+
+.profil p{
+    text-align: center;
+    max-width: 30rem;
+    margin: auto;
+}
+
+.profil .row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    justify-content: center;
+
+}
+
+
+.profil .row .profil-card{
+    text-align: center;
+    padding-bottom: 4rem;
+}
+
+.profil .row .profil-card img{
+    border-radius: 50%;
+    width: 80%;
+}
+
+.profil .row .profil-card .profil-card-tittle{
+    margin-top: 1.5rem auto 0.5rem;
+}
+
+
+/* media queries */
+
+/* laptop */
+
+@media (max-width:1366px){
+    html {
+        font-size: 75%;
+    }
+}
+
+/* tablet */
+@media (max-width:768px){
+    html {
+        font-size: 62.5%;
+    }
+    .about .row{
+        flex-wrap: wrap;
+    }
+
+    .about .row .about-img img{
+        height: 24rem;
+        object-fit: cover;
+        object-position: center;
+    }
+
+.about .row .content{
+    padding: 0;
+}
+
+.about .row .content h3{
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+.about .row .content p{
+    font-size: 1.6rem;
+}
+
+
+}
+/* handphone */
+@media (max-width:450px){
+    html {
+        font-size: 55%;
+    }
+}
